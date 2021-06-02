@@ -3,11 +3,13 @@
   "version": "0.0.1",
   "description": "CI/CD pipeline for an instagram post",
   "scripts": {
-    "test": "jest ./src"
+    "test": "jest ./src",
+    "build": "node ./build/index.js --publish=./releases/v0.1.2 --source=./src/post.json"
   },
   "author": "Mary Zam",
   "license": "MIT",
   "dependencies": {
+    "canvas": "^2.8.0",
     "d3-color": "^2.0.0"
   },
   "devDependencies": {
