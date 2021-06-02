@@ -1,0 +1,32 @@
+{
+    "image": {
+        "backgroundColor": "#199CCC",
+        "text": "This post was\nbuilt & deployed,\nusing TeamCity\nCI\\CD pipeline*",
+        "note": "* and it's not even a joke 😉"
+    },
+    "description": "Because everything deserves a good CI/CD pipeline.",
+    "hashtags": [
+        "#softwaredevelopment",
+        "#softwaredeveloper",
+        "#continiousintegration",
+        "#backenddevelopment",
+        "#backend",
+        "#javascript",
+        "#kotlin",
+        "#github",
+        "#opensource",        
+        "#programmingjokes",
+        "#devOps",
+        "#teamcity",
+        "#automation",
+        "#unittests",
+        "#testing",
+        "#frontenddevelopment",
+        "#instagramtips",
+        "#techtips",
+        "#techtrends",
+        "#devopsengineer",
+        "#womenwhocode",
+        "#peoplewhocode"
+    ]
+}

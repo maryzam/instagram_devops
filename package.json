@@ -1,9 +1,16 @@
 {
-  "name": "Instagram DevOps",
+  "name": "instagram_devops",
   "version": "0.0.1",
   "description": "CI/CD pipeline for an instagram post",
-  "scripts": {},
+  "scripts": {
+    "test": "jest ./src"
+  },
   "author": "Mary Zam",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "d3-color": "^2.0.0"
+  },
+  "devDependencies": {
+    "jest": "^27.0.3"
+  }
 }
