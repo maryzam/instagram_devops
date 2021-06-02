@@ -1,0 +1,9 @@
+{
+  "name": "Instagram DevOps",
+  "version": "0.0.1",
+  "description": "CI/CD pipeline for an instagram post",
+  "scripts": {},
+  "author": "Mary Zam",
+  "license": "MIT",
+  "dependencies": {}
+}
