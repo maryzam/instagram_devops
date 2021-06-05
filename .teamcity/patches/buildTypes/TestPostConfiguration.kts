@@ -16,7 +16,6 @@ create(DslContext.projectId, BuildType({
     id("TestPostConfiguration")
     name = "Test post configuration"
 
-    artifactRules = "+:**/* => test_results"
     buildNumberPattern = "v1.0.%build.counter%"
 
     params {
