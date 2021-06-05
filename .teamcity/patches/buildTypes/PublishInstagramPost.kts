@@ -16,7 +16,6 @@ create(DslContext.projectId, BuildType({
     id("PublishInstagramPost")
     name = "Publish Instagram Post"
 
-    artifactRules = "+:releases/%build.number% => insagram-post-%build.number%.zip"
     buildNumberPattern = "v1.0.%build.counter%"
 
     params {
