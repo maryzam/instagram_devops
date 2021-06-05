@@ -1,6 +1,7 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.finishBuildTrigger
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.v2019_2.ui.*
 
@@ -18,6 +19,11 @@ changeBuildType(RelativeId("BuildInstagramPost")) {
     triggers {
         remove {
             vcs {
+            }
+        }
+        add {
+            finishBuildTrigger {
+                buildType = "InstagramDevops_TestPostConfiguration"
             }
         }
     }
