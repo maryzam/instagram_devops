@@ -30,10 +30,6 @@ create(DslContext.projectId, BuildType({
 
     steps {
         script {
-            name = "Run tests"
-            scriptContent = "npm run test"
-        }
-        script {
             name = "Run Instagram post"
             scriptContent = """
                 node --version
