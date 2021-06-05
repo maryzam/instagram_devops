@@ -16,7 +16,7 @@ create(DslContext.projectId, BuildType({
     id("TestPostConfiguration")
     name = "Test post configuration"
 
-    artifactRules = "+:releases/%build.number% => insagram-post-%build.number%"
+    artifactRules = "+:**/* => test_results"
     buildNumberPattern = "v1.0.%build.counter%"
 
     params {
