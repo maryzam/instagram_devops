@@ -1,6 +1,7 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.v2019_2.ui.*
 
 /*
@@ -13,6 +14,13 @@ changeBuildType(RelativeId("BuildInstagramPost")) {
         "Unexpected option value: artifactRules = $artifactRules"
     }
     artifactRules = "+:releases/%build.number% => insagram-post-%build.number%"
+
+    triggers {
+        remove {
+            vcs {
+            }
+        }
+    }
 
     dependencies {
         add(RelativeId("TestPostConfiguration")) {
