@@ -29,15 +29,15 @@ create(DslContext.projectId, BuildType({
 
     steps {
         script {
+            name = "Install npm packages"
+            scriptContent = "npm install"
+        }
+        script {
             name = "Publish Instagram post"
             scriptContent = """
                 node --version
                 node ./.deploy/index.js --publish=./releases/insagram-post-%build.number%
             """.trimIndent()
-        }
-        script {
-            name = "Install npm packages"
-            scriptContent = "npm install"
         }
     }
 
