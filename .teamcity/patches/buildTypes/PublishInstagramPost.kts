@@ -16,7 +16,7 @@ create(DslContext.projectId, BuildType({
     id("PublishInstagramPost")
     name = "Publish Instagram Post"
 
-    buildNumberPattern = "v1.0.%build.counter%"
+    buildNumberPattern = "%dep.InstagramDevops_BuildInstagramPost.build.number%"
 
     params {
         param("env.IG_PROXY", "")
