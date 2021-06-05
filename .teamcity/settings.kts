@@ -36,6 +36,9 @@ project {
 object Build : BuildType({
     name = "Build Instagram Post"
 
+    artifactRules = "+:**/releases/%build.number% => instagram-post-%build.number%"
+    buildNumberPattern = "v1.0.%build.counter%"
+
     vcs {
         root(DslContext.settingsRoot)
     }
