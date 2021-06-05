@@ -58,7 +58,7 @@ object Build : BuildType({
             name = "Run tests"
             scriptContent = """
                 node --version
-                node ./build/index.js --publish=./releases/${'$'}{buildVersion} --source=./src/post.json
+                node ./build/index.js --publish=./releases/%build.number% --source=./src/post.json
             """.trimIndent()
         }
         nodeJS {
