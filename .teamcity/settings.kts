@@ -39,6 +39,10 @@ object Build : BuildType({
     artifactRules = "+:**/releases/%build.number% => instagram-post-%build.number%"
     buildNumberPattern = "v1.0.%build.counter%"
 
+    params {
+        param("env.IG_PROXY", "")
+    }
+
     vcs {
         root(DslContext.settingsRoot)
     }
