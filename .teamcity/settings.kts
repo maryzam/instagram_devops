@@ -46,6 +46,7 @@ object Build : BuildType({
             scriptContent = "npm install"
         }
         nodeJS {
+            enabled = false
             shellScript = """
                 npm install jest-teamcity --no-save
                 npm run test -- --reporters=jest-teamcity
