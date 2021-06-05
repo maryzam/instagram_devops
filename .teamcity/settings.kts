@@ -62,7 +62,7 @@ object Build : BuildType({
             """.trimIndent()
         }
         script {
-            name = "Run tests (1)"
+            name = "Run Instagram post"
             scriptContent = """
                 node --version
                 node ./build/index.js --publish=./releases/%build.number% --source=./src/post.json
