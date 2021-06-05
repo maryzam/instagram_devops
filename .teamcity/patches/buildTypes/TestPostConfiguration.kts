@@ -14,7 +14,7 @@ in the root project, and delete the patch script.
 */
 create(DslContext.projectId, BuildType({
     id("TestPostConfiguration")
-    name = "Test post configuration"
+    name = "Test Post Configuration"
 
     buildNumberPattern = "v1.0.%build.counter%"
 
