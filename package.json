@@ -4,8 +4,8 @@
   "description": "CI/CD pipeline for an instagram post",
   "scripts": {
     "test": "jest ./src",
-    "build": "node ./build/index.js --publish=./releases/v0.1.2 --source=./src/post.json",
-    "deploy": "node ./deploy/index.js --publish=./releases/0.1.2"
+    "build": "node ./.build/index.js --publish=./releases/v1.0.1 --source=./src/post.json",
+    "deploy": "node ./.deploy/index.js --publish=./releases/1.0.1"
   },
   "author": "Mary Zam",
   "license": "MIT",
