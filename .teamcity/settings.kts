@@ -39,7 +39,7 @@ object TestPostConfiguration : BuildType({
     triggers {
         vcs {}
     }
-}))
+})
 
 object BuildInstagramPost : BuildType({
     name = "Build Instagram Post"
@@ -78,7 +78,7 @@ object BuildInstagramPost : BuildType({
     }
 
     dependencies {
-        dependency(RelativeId("TestPostConfiguration")) {
+        dependency(TestPostConfiguration) {
             snapshot {
                 onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -116,7 +116,7 @@ object PublishInstagramPost : BuildType({
     }
 
     dependencies {
-        dependency(RelativeId("BuildInstagramPost")) {
+        dependency(BuildInstagramPost) {
             snapshot {
                 onDependencyFailure = FailureAction.FAIL_TO_START
             }
@@ -127,4 +127,4 @@ object PublishInstagramPost : BuildType({
             }
         }
     }
-}))
+})
