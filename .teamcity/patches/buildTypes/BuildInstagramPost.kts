@@ -13,4 +13,13 @@ changeBuildType(RelativeId("BuildInstagramPost")) {
         "Unexpected option value: artifactRules = $artifactRules"
     }
     artifactRules = "+:releases/%build.number% => insagram-post-%build.number%"
+
+    dependencies {
+        add(RelativeId("TestPostConfiguration")) {
+            snapshot {
+                onDependencyFailure = FailureAction.FAIL_TO_START
+            }
+        }
+
+    }
 }
