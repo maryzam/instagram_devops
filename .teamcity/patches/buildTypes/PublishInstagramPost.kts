@@ -4,7 +4,6 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.BuildType
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.vcsLabeling
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
-import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.v2019_2.ui.*
 
 /*
@@ -35,11 +34,6 @@ create(DslContext.projectId, BuildType({
                 node --version
                 node ./.deploy/index.js --publish=./releases/insagram-post-%build.number%
             """.trimIndent()
-        }
-    }
-
-    triggers {
-        vcs {
         }
     }
 
