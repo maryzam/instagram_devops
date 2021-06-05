@@ -30,9 +30,12 @@ const publishPost = async () => {
       caption: await loadComment(),
       location: await getAucklandLocation()
     });
-    console.log('**********************');
-    console.log('Post is published!');
+
     console.log(publishResult);
+
+    if (!publishPost || (publishPost.status !== 'Ok')) {
+        throw new Error('Unable to publish the post. Please, check info above.');
+    }
 }
 
 const loadImageFile = async () => {
