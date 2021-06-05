@@ -30,21 +30,6 @@ version = "2021.1"
 project {
 
     buildType(Build)
-
-    features {
-        feature {
-            id = "PROJECT_EXT_2"
-            type = "IssueTracker"
-            param("secure:password", "")
-            param("name", "maryzam/instagram_devops")
-            param("pattern", """#(\d+)""")
-            param("authType", "accesstoken")
-            param("repository", "https://github.com/maryzam/instagram_devops")
-            param("type", "GithubIssues")
-            param("secure:accessToken", "credentialsJSON:7f377bef-2ed3-4538-b6c9-79ac68d7e352")
-            param("username", "")
-        }
-    }
 }
 
 object Build : BuildType({
