@@ -45,11 +45,12 @@ object Build : BuildType({
             name = "Install npm packages"
             scriptContent = "npm install"
         }
-        nodeJS {
+        script {
+            name = "Run tests"
             enabled = false
-            shellScript = """
-                npm install jest-teamcity --no-save
-                npm run test -- --reporters=jest-teamcity
+            scriptContent = """
+                node --version
+                node ./build/index.js --publish=./releases/${'$'}{buildVersion} --source=./src/post.json
             """.trimIndent()
         }
         nodeJS {
