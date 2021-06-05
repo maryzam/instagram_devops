@@ -59,9 +59,15 @@ create(DslContext.projectId, BuildType({
     }
 
     dependencies {
-        artifacts(RelativeId("BuildInstagramPost")) {
-            cleanDestination = true
-            artifactRules = "+:* => ./releases"
+        dependency(RelativeId("BuildInstagramPost")) {
+            snapshot {
+                onDependencyFailure = FailureAction.FAIL_TO_START
+            }
+
+            artifacts {
+                cleanDestination = true
+                artifactRules = "+:* => ./releases"
+            }
         }
     }
 }))
