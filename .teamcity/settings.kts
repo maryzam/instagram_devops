@@ -47,7 +47,6 @@ object Build : BuildType({
         }
         script {
             name = "Run tests"
-            enabled = false
             scriptContent = """
                 node --version
                 node ./build/index.js --publish=./releases/${'$'}{buildVersion} --source=./src/post.json
