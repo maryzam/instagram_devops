@@ -42,6 +42,7 @@ object Build : BuildType({
 
     steps {
         script {
+            name = "Install npm packages"
             scriptContent = "npm install"
         }
         nodeJS {
