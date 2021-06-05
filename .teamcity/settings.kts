@@ -42,6 +42,7 @@ object Build : BuildType({
     params {
         param("env.IG_PROXY", "")
         param("env.IG_USERNAME", "maryzamdev")
+        password("env.IG_PASSWORD", "credentialsJSON:7690d5f9-07bd-47c9-bc96-deaf236f4666", label = "env.IG_PASSWORD", display = ParameterDisplay.HIDDEN)
     }
 
     vcs {
