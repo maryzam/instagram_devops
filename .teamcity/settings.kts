@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.vcsLabeling
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.nodeJS
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 
 /*
@@ -40,8 +41,8 @@ object Build : BuildType({
     }
 
     steps {
-        nodeJS {
-            shellScript = "npm install"
+        script {
+            scriptContent = "npm install"
         }
         nodeJS {
             shellScript = """
