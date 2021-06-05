@@ -35,6 +35,10 @@ create(DslContext.projectId, BuildType({
                 node ./.deploy/index.js --publish=./releases/insagram-post-%build.number%
             """.trimIndent()
         }
+        script {
+            name = "Install npm packages"
+            scriptContent = "npm install"
+        }
     }
 
     features {
