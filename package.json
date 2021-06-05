@@ -14,6 +14,7 @@
     "d3-color": "^2.0.0"
   },
   "devDependencies": {
+    "instagram-private-api": "^1.45.1",
     "jest": "^27.0.3",
     "jest-teamcity": "^1.9.0"
   },
