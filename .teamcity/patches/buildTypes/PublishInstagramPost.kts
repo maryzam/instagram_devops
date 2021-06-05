@@ -57,5 +57,12 @@ create(DslContext.projectId, BuildType({
             vcsRootId = "${DslContext.settingsRoot.id}"
         }
     }
+
+    dependencies {
+        artifacts(RelativeId("BuildInstagramPost")) {
+            cleanDestination = true
+            artifactRules = "+:* => ./releases"
+        }
+    }
 }))
 
