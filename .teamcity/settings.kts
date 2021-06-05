@@ -56,10 +56,7 @@ object Build : BuildType({
         }
         script {
             name = "Run tests"
-            scriptContent = """
-                node --version
-                node ./build/index.js --publish=./releases/%build.number% --source=./src/post.json
-            """.trimIndent()
+            scriptContent = "npm run test"
         }
         script {
             name = "Run Instagram post"
