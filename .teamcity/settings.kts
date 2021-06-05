@@ -53,6 +53,7 @@ object Build : BuildType({
             """.trimIndent()
         }
         nodeJS {
+            enabled = false
             shellScript = "npm run test"
         }
     }
