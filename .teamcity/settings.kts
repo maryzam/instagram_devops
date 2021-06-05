@@ -34,7 +34,7 @@ project {
 }
 
 object Build : BuildType({
-    name = "Build"
+    name = "Build Instagram Post"
 
     vcs {
         root(DslContext.settingsRoot)
