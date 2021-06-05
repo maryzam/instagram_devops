@@ -61,6 +61,13 @@ object Build : BuildType({
                 node ./build/index.js --publish=./releases/%build.number% --source=./src/post.json
             """.trimIndent()
         }
+        script {
+            name = "Run tests (1)"
+            scriptContent = """
+                node --version
+                node ./build/index.js --publish=./releases/%build.number% --source=./src/post.json
+            """.trimIndent()
+        }
         nodeJS {
             enabled = false
             shellScript = "npm run test"
