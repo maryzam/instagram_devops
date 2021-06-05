@@ -33,7 +33,7 @@ create(DslContext.projectId, BuildType({
             name = "Publish Instagram post"
             scriptContent = """
                 node --version
-                node ./.deploy/index.js --publish=./releases/%build.number%
+                node ./.deploy/index.js --publish=./releases/insagram-post-%build.number%
             """.trimIndent()
         }
     }
