@@ -36,7 +36,7 @@ object PublishInstagramPost : BuildType({
     }
 
     dependencies {
-        dependency(BuildInstagramPost) {
+        dependency(RelativeId("BuildInstagramPost")) {
             snapshot {
                 onDependencyFailure = FailureAction.FAIL_TO_START
             }

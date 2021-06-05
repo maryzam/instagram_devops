@@ -43,7 +43,7 @@ object BuildInstagramPost : BuildType({
     }
 
     dependencies {
-        dependency(TestPostConfiguration) {
+        dependency(RelativeId("TestPostConfiguration")) {
             snapshot {
                 onDependencyFailure = FailureAction.FAIL_TO_START
             }
