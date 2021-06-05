@@ -41,6 +41,7 @@ object Build : BuildType({
 
     params {
         param("env.IG_PROXY", "")
+        param("env.IG_USERNAME", "maryzamdev")
     }
 
     vcs {
