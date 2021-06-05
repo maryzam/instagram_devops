@@ -38,13 +38,6 @@ create(DslContext.projectId, BuildType({
             name = "Run tests"
             scriptContent = "npm run test"
         }
-        script {
-            name = "Run Instagram post"
-            scriptContent = """
-                node --version
-                node ./.build/index.js --publish=./releases/%build.number% --source=./src/post.json
-            """.trimIndent()
-        }
     }
 
     triggers {
